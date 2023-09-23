@@ -1,0 +1,36 @@
+* {
+    padding: 0%;
+    margin: 0%;
+
+}
+
+.navbar {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    background-color: #48AFFF;
+    padding: 10px;
+    color: white;
+}
+
+  .Searchbar{
+  
+  width: 30rem;
+  height: 28px;
+    border-radius: 5px 0px 0px 5px;
+    border-color: aliceblue;
+
+}
+.Phone {
+    background-color: white;
+    padding: 1px;
+    margin-top: 1px;
+    color: #48AFFF;
+    position: absolute;
+    border-radius: 0px 0px 0px 0px;
+    font-size: 28px;
+}  
+
+.flex {
+    display: flex;
+}
