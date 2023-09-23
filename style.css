@@ -34,3 +34,50 @@
 .flex {
     display: flex;
 }
+
+    .log {
+        width: 80px;
+        height: 30px;
+        padding: 5px;
+        border-radius: black;
+        border: 1px solid white;
+        color: #48AFFF;
+        background-color: white;
+        cursor: pointer;
+        font-size: 15px;
+        border-radius: 2em / 5em;
+    }
+
+    .log:hover {
+        background-color:#48AFFF;
+        color: white;
+    }
+.register {
+    padding: 8px 5px;
+    color: white;
+    background-color: #48AFFF;
+    margin: 0px 0px 0px 9px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px 5px 5px 5px;
+}
+.btn {
+    padding: 10px 20px 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px 20px 20px 10px;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    background-color: #48AFFF;
+    transition: 2ms;
+}
+
+
