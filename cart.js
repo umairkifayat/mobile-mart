@@ -3,7 +3,7 @@ function gotohome(params) {
 }
 
 const parent = document.getElementById("parent");
-const child = document.getElementsByClassName("child");
+
 
 let dataa =localStorage.getItem("cartarr");
 let array= JSON.parse(dataa);
@@ -23,9 +23,9 @@ function render(params) {
          <p><b>Quantity</b>: ${array[i].quantity}</p>
          <p><b>Price</b>: ${array[i].price}</p>
          <p><b>Total price</b>: ${array[i].price * array[i].quantity}</p>
-         <button onclick = "sub(${i})">-</button>
-         <button onclick = "add(${i})">+</button><br>
-         
+         <button onclick = "sub(${i})" class = "btn">-</button>
+         <button onclick = "add(${i})" class = "btn">+</button><br>
+         <button  onclick = "del(${i})" class = "addbtns">Delete</button>
          </div> 
         </div>`
      
@@ -51,4 +51,8 @@ function sub(i) {
     }
 }
 
-
+function del(i) {
+    parent.innerHTML = "";
+    array.splice(0, 1)
+    render()
+}

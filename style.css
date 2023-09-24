@@ -44,6 +44,10 @@ body {
     /* overflow: hidden; */
     /* position: fixed; */
 }
+.h2{
+    padding: 1rem;
+    font-size: 2rem;
+}
 
 .log {
     width: 80px;
@@ -54,7 +58,7 @@ body {
     color: #48AFFF;
     background-color: white;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 10rem;
     border-radius: 2em / 5em;
 }
 
@@ -140,4 +144,30 @@ margin-top: 2rem;
     background-color: #48AFFF;
     color: white;
    
+}
+.addbtns{
+    width: 8rem;
+    height: 4rem;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px 30px 30px 5px;
+    background-color: white;
+    transition: 2ms;
+    cursor: pointer;
+    border-color: white;
+    text-align: center;
+    margin-top: 2rem;
+}
+.addbtns:hover {
+    background-color: #ff0000;
+    color: white;
+   
+}
+
+.add{
+    width: 4rem;
+    height: 2rem;
+    padding: 2px;
+    font-size: 10px;
+    cursor: pointer;
 }
