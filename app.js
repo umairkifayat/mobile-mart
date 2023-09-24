@@ -3,6 +3,15 @@ const mobile = document.querySelector(".mobile")
 
 const phones = [
     {
+        brand: 'Techno',
+        img: "https://images.priceoye.pk/tecno-camon-20-pro-pakistan-priceoye-hzd43-270x270.webp",
+        model: 'Camon',
+        ram: 10,
+        rom: 256,
+        camera: '20 megapixel',
+        price: 159000,
+    },
+    {
         brand: 'Samsung',
         img: "https://m.media-amazon.com/images/I/41KRhotx+PL.jpg",
         model: 'S20',
@@ -82,16 +91,58 @@ const phones = [
 for (let i = 0; i < phones.length; i++) {
     mobile.innerHTML += `
     
-        <div class="m-child container">
-        
-                <img class = "image" src="${phones[i].img}" alt="">
-            <h3  class = "container">Brand:${phones[i].brand}</h3>
-                <p class = "container"><b> Model:</b>${phones[i].model}</p>
-             <p> class = "container"<b>Ram:</b>${phones[i].ram}</p>
-            <p class = "container"><b>Rom:</b>${phones[i].rom}</p>
-        <p> class = "container"<b>Camera:</b>${phones[i].camera}</p>
-          <p class = "container">  <b>Price: </b>${phones[i].price}</p>
+    <div class="">
+    <div class = " main">
+    <img class="image" src = "${phones[i].img}" alt="">
+    <h3><b>Brand</b>:${phones[i].brand}</h3>
+    <p><b>Model</b>:${phones[i].model}</p>
+    <p><b>Ram</b>:${phones[i].ram}</p>
+    <p><b>Rom</b>:${phones[i].rom}</p>
+    <p><b>Camera</b>:${phones[i].camera}</p>
+    <p><b>Price</b>:${phones[i].price}</p>
+    <button class="addbtn" onclick = "addcart(${i})">ADD To Cart</button>
+</div>
 </div>
                 `
 
+}
+const cartarr = [];
+function addcart(index) {
+    // console.log(phones[i]);
+    if (cartarr.includes(phones[index])) {
+        // console.log("if chl gya");
+        for (let i = 0; i < cartarr.length; i++) {
+        if (cartarr[i] === phones[index]) {
+            phones[index].quantity += 1
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Item Added ',
+                showConfirmButton: false,
+                timer: 1500
+            })
+            // console.log(phones[index]);
+        
+        }
+        
+            
+        }
+    } else {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Item Added To Cart',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        phones[index].quantity = 1
+        cartarr.push(phones[index])
+        // console.log("else chl gya");
+    }
+}
+
+function gotocart(params) {
+    const cart = JSON.stringify(cartarr);
+localStorage.setItem("cartarr", cart)
+    window.location = "./cart.html" 
 }
