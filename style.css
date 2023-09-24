@@ -1,7 +1,10 @@
 * {
     padding: 0%;
     margin: 0%;
+}
 
+body {
+    background-color: rgb(230, 230, 230);
 }
 
 .navbar {
@@ -13,45 +16,53 @@
     color: white;
 }
 
-  .Searchbar{
-  
-  width: 30rem;
-  height: 28px;
+.search {
+    border: 1px solid white;
+    margin-top: 5px;
     border-radius: 5px 0px 0px 5px;
-    border-color: aliceblue;
-
+    width: 31rem;
+    height: 30px;
+    color: black;
+    /* height: 40px;
+    width: 100%; */
 }
+
 .Phone {
     background-color: white;
-    padding: 1px;
-    margin-top: 1px;
+    padding: 0px;
+    margin-bottom: 1px;
     color: #48AFFF;
-    position: absolute;
-    border-radius: 0px 0px 0px 0px;
+    /* position: absolute; */
+    /* border-radius: 0px 0px 0px 0px; */
     font-size: 28px;
-}  
+}
 
 .flex {
     display: flex;
+    /* position:absolute; */
+    /* position: relative; */
+    /* overflow: hidden; */
+    /* position: fixed; */
 }
 
-    .log {
-        width: 80px;
-        height: 30px;
-        padding: 5px;
-        border-radius: black;
-        border: 1px solid white;
-        color: #48AFFF;
-        background-color: white;
-        cursor: pointer;
-        font-size: 15px;
-        border-radius: 2em / 5em;
-    }
+.log {
+    width: 80px;
+    height: 30px;
+    padding: 20px;
+    border-radius: black;
+    border: 1px solid white;
+    color: #48AFFF;
+    background-color: white;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 2em / 5em;
+}
 
-    .log:hover {
-        background-color:#48AFFF;
-        color: white;
-    }
+.log:hover {
+    background-color: #48AFFF;
+    color: white;
+}
+
 .register {
     padding: 8px 5px;
     color: white;
@@ -61,6 +72,7 @@
     border: 1px solid white;
     border-radius: 5px 5px 5px 5px;
 }
+
 .btn {
     padding: 10px 20px 10px 20px;
     margin-top: 10px;
@@ -80,4 +92,31 @@
     transition: 2ms;
 }
 
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
+.mobiles {
+    display: flex;
+    justify-content: space-evenly;
+    flex: wrap;
+}
+
+.m-child {
+    background-color: white;
+    background-size: 100% 100%;
+    padding: 20px;
+    margin-top: 2rem;
+}
+.image{
+    width: 10rem;
+    height: 8rem;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    flex: wrap;
+}
