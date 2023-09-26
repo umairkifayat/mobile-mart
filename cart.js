@@ -3,6 +3,8 @@ function gotohome(params) {
 }
 
 const parent = document.getElementById("parent");
+ const totalPriceElement = document.getElementById("totalPrice");
+
 
 
 let dataa =localStorage.getItem("cartarr");
@@ -10,7 +12,11 @@ let array= JSON.parse(dataa);
 // console.log(cartarr);
 
 function render(params) {
+     parent.innerHTML = '';
+     let total = 0;
     for (let i = 0; i < array.length; i++) {
+          const totalPrice = array[i].price * array[i].quantity;
+         total += totalPrice;
     //   array[i].totalprice += `${array[i].price} * ${array[i].quantity}`
     parent.innerHTML +=`<div class = "">
          <div class = " main">
@@ -31,6 +37,7 @@ function render(params) {
      
         
 }
+     totalPriceElement.innerHTML = `Total Price: ${total.toFixed(2)}`;
 }
 render()
 
