@@ -1,58 +1,87 @@
+
+
+
+
+
+
+
 function gotohome(params) {
     window.location = "./index.html"
+    localStorage.setItem('cartarr' , JSON.stringify(array));
 }
 
-const parent = document.getElementById("parent");
+const parent = document.querySelector("#parent");
+const totalPriceElement = document.getElementById("totalPrice");
 
 
 let dataa =localStorage.getItem("cartarr");
 let array= JSON.parse(dataa);
 // console.log(cartarr);
 
-function render(params) {
-    for (let i = 0; i < array.length; i++) {
-    //   array[i].totalprice += `${array[i].price} * ${array[i].quantity}`
-    parent.innerHTML +=`<div class = "">
-         <div class = " main">
-         <img class="image" src = "${array[i].img}" alt="">
-         <h3><b>Brand</b>: ${array[i].brand}</h3>
-         <p><b>Model</b>: ${array[i].model}</p>
-         <p><b>Ram</b>: ${array[i].ram}</p>
-         <p><b>Rom</b>: ${array[i].rom}</p>
-         <p><b>Camera</b>: ${array[i].camera}</p>
-         <p><b>Quantity</b>: ${array[i].quantity}</p>
-         <p><b>Price</b>: ${array[i].price}</p>
-         <p><b>Total price</b>: ${array[i].price * array[i].quantity}</p>
-         <button onclick = "sub(${i})" class = "btn">-</button>
-         <button onclick = "add(${i})" class = "btn">+</button><br>
-         <button  onclick = "del(${i})" class = "addbtns">Delete</button>
-         </div> 
-        </div>`
+function cartrender() {
+    let total = 0;
+    if (array.length > 0) {
+        for (let i = 0; i < array.length; i++) {
+            const totalPrice = array[i].price * array[i].quantity;
+            total += totalPrice;
+        parent.innerHTML +=`<div>
+             <div class = " main">
+             <img class="image" src = "${array[i].img}" alt="">
+             <h3><b>Brand</b>: ${array[i].brand}</h3>
+             <p><b>Model</b>: ${array[i].model}</p>
+             <p><b>Ram</b>: ${array[i].ram}</p>
+             <p><b>Rom</b>: ${array[i].rom}</p>
+             <p><b>Camera</b>: ${array[i].camera}</p>
+             <p><b>Quantity</b>: ${array[i].quantity}</p>
+             <p><b>Price</b>: ${array[i].price}</p>
+             <p><b>Total price</b>: ${array[i].price * array[i].quantity}</p>
+             <button onclick = "sub(${i})" class = "btn">-</button>
+             <button onclick = "add(${i})" class = "btn">+</button><br>
+             <button  onclick = "del(${i})" class = "addbtns">Delete</button>
+             </div> 
+            </div>`
+         
+            
+        
+    totalPrice.innerHTML = `Total Price: ${total.toFixed(2)}`;
+}
+    
+        
+    } else {
+        parent.innerHTML = '<center><h2>No item Found..</h2></center>'       
+    }
+}   
      
         
-}
-}
-render()
+
+
+
+cartrender()
 
 
 function add(i) {
     parent.innerHTML = ''
    array[i].quantity += 1
-   render()
+   cartrender()
 }
 function sub(i) {
     parent.innerHTML = "";
     array[i].quantity -= 1
-    render()
+    cartrender()
     if (array[i].quantity === 0) {
         parent.innerHTML = ""
         array.splice(i,  1)
-        render()
+        cartrender()
     }
 }
 
 function del(i) {
     parent.innerHTML = "";
     array.splice(0, 1)
-    render()
+    cartrender()
 }
+
+// reload page problem 
+window.onbeforeunload = function() {
+    localStorage.setItem('array' , JSON.stringify(cartArr));
+};
