@@ -109,8 +109,8 @@ for (let i = 0; i < phones.length; i++) {
 
 const cartData = localStorage.getItem('cartarr');
 const jsonData = JSON.parse(cartData);
-// console.log(jsonData);
-const array = [...jsonData]
+console.log(jsonData);
+// const array = [...jsonData]
 
 
 
