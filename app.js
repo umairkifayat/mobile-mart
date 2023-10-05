@@ -106,15 +106,16 @@ for (let i = 0; i < phones.length; i++) {
                 `
 
 }
+// const cartarr = [];         
 
 const cartData = localStorage.getItem('cartarr');
 const jsonData = JSON.parse(cartData);
 console.log(jsonData);
-// const array = [...jsonData]
+const cartarr = [...jsonData];
 
 
 
-const cartarr = [];
+// const cartarr = [];         
 function addcart(index) {
     // console.log(phones[i]);
     if (cartarr.includes(phones[index])) {

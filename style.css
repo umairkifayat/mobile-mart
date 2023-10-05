@@ -76,6 +76,11 @@ body {
     border: 1px solid white;
     border-radius: 5px 5px 5px 5px;
 }
+.flex{
+    display: flex;
+justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
 .btn {
     padding: 10px 20px 10px 20px;
@@ -128,6 +133,7 @@ body {
     padding: 20px;
 margin-top: 2rem;
     border-radius: 20px 10px 20px 10px; 
+    
 }
 .addbtn{
     width: 8rem;
@@ -170,4 +176,10 @@ margin-top: 2rem;
     padding: 2px;
     font-size: 10px;
     cursor: pointer;
+}
+.total{
+    padding: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
 }

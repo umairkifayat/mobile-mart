@@ -28,8 +28,9 @@ function cartrender() {
     if (array.length > 0) {
         for (let i = 0; i < array.length; i++) {
             totals += array[i].price * array[i].quantity;
-            parent.innerHTML += `<div>
+            parent.innerHTML += `<div >
              <div class = " main">
+             <div >
              <img class="image" src = "${array[i].img}" alt="">
              <h3><b>Brand</b>: ${array[i].brand}</h3>
              <p><b>Model</b>: ${array[i].model}</p>
@@ -43,11 +44,12 @@ function cartrender() {
              <button onclick = "add(${i})" class = "btn">+</button><br>
              <button  onclick = "del(${i})" class = "addbtns">Delete</button>
              </div> 
-            </div>`
+            </div>
+            </div >`
 
 
 
-            total.innerHTML = `Total Price:${totals} `;
+            total.innerHTML = `<p class ='total'><b>Total Price:${totals}</p></b> `;
           
         }
         
@@ -63,35 +65,7 @@ function cartrender() {
 
 cartrender()
 
-// function render(params) {
-//     parent.innerHTML = '';
-//     let total = 0;
-//     for (let i = 0; i < array.length; i++) {
-//         const totalPrice = array[i].price * array[i].quantity;
-//         total += totalPrice;
-//         //   array[i].totalprice += `${array[i].price} * ${array[i].quantity}`
-//         parent.innerHTML += `<div class = "">
-//          <div class = " main">
-//          <img class="image" src = "${array[i].img}" alt="">
-//          <h3><b>Brand</b>: ${array[i].brand}</h3>
-//          <p><b>Model</b>: ${array[i].model}</p>
-//          <p><b>Ram</b>: ${array[i].ram}</p>
-//          <p><b>Rom</b>: ${array[i].rom}</p>
-//          <p><b>Camera</b>: ${array[i].camera}</p>
-//          <p><b>Quantity</b>: ${array[i].quantity}</p>
-//          <p><b>Price</b>: ${array[i].price}</p>
-//          <p><b>Total price</b>: ${array[i].price * array[i].quantity}</p>
-//          <button onclick = "sub(${i})" class = "btn">-</button>
-//          <button onclick = "add(${i})" class = "btn">+</button><br>
-//          <button  onclick = "del(${i})" class = "addbtns">Delete</button>
-//          </div> 
-//         </div>`
 
-
-//     }
-//     totalPriceElement.innerHTML = `Total Price: ${total.toFixed(2)}`;
-// }
-// render()
 
 
 
