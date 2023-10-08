@@ -155,3 +155,6 @@ function gotocart(params) {
 localStorage.setItem("cartarr", cart)
     window.location = "./cart.html" 
 }
+function log(params) {
+    window.location = './log.html'
+}

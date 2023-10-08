@@ -24,35 +24,35 @@ let array = JSON.parse(dataa);
 
 function cartrender() {
     let totals = 0;
-    total.innerHTML= " "
+    total.innerHTML = " "
     if (array.length > 0) {
         for (let i = 0; i < array.length; i++) {
             totals += array[i].price * array[i].quantity;
-            parent.innerHTML += `<div >
-             <div class = " main">
-             <div >
-             <img class="image" src = "${array[i].img}" alt="">
+            parent.innerHTML += `
+            <div class = 'flex'> 
+             <div class = 'main'>
+             <img class="image" src = "${array[i].img}">
              <h3><b>Brand</b>: ${array[i].brand}</h3>
-             <p><b>Model</b>: ${array[i].model}</p>
-             <p><b>Ram</b>: ${array[i].ram}</p>
-             <p><b>Rom</b>: ${array[i].rom}</p>
-             <p><b>Camera</b>: ${array[i].camera}</p>
-             <p><b>Quantity</b>: ${array[i].quantity}</p>
-             <p><b>Price</b>: ${array[i].price}</p>
-             <p><b>Total price</b>: ${array[i].price * array[i].quantity}</p>
+           <p> <b>Model</b>: ${array[i].model}<br>
+    <b>Ram</b>: ${array[i].ram}<br>
+        <b>Rom</b>: ${array[i].rom}<br>
+        <b>Camera</b>: ${array[i].camera}<br>
+        <b>Quantity</b>: ${array[i].quantity}<br>
+        <b>Price</b>: ${array[i].price}<br>
+         <b>Total price</b>: ${array[i].price * array[i].quantity}</p>
              <button onclick = "sub(${i})" class = "btn">-</button>
              <button onclick = "add(${i})" class = "btn">+</button><br>
              <button  onclick = "del(${i})" class = "addbtns">Delete</button>
              </div> 
-            </div>
-            </div >`
+             </div> 
+            `
 
 
 
             total.innerHTML = `<p class ='total'><b>Total Price:${totals}</p></b> `;
-          
+
         }
-        
+
 
     } else {
         parent.innerHTML = '<center><h2>No item Found..</h2></center>'

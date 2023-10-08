@@ -1,3 +1,37 @@
+@media  screen and (min-width:200px) {
+    .navbar {
+        justify-content: space-evenly;
+    }
+    .h1 {
+        font-size: 7px;
+    }
+    .search {
+       display: none;
+
+    }
+    .Phone {
+       display: none;
+    }
+    .log{
+        display: none;
+    }
+    .register {
+        padding: 2px 1px;
+        color: white;
+        background-color: #48AFFF;
+        margin: 0px 0px 0px 9px;
+        cursor: pointer;
+        border: 1px solid white;
+        border-radius: 5px 5px 5px 5px;
+    }
+    .header{
+        display: none;
+    }
+    .h2{
+        font-size: 7px;
+    }
+
+}
 @media screen and (min-width:300px) {
     .navbar {
         justify-content: space-evenly;

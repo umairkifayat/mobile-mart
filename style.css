@@ -37,14 +37,8 @@ body {
     font-size: 28px;
 }
 
-.flex {
-    display: flex;
-    /* position:absolute; */
-    /* position: relative; */
-    /* overflow: hidden; */
-    /* position: fixed; */
-}
-.h2{
+
+.h2 {
     padding: 1rem;
     font-size: 2rem;
 }
@@ -76,10 +70,15 @@ body {
     border: 1px solid white;
     border-radius: 5px 5px 5px 5px;
 }
-.flex{
+
+.flex {
     display: flex;
-justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: inline-flex;
+    justify-content: space-evenly;
+    /* margin-bottom: 20px; */
+    /* border: 1px solid #ccc; */
+    padding: 50px;
+    /* padding: 3px; */
 }
 
 .btn {
@@ -114,28 +113,32 @@ justify-content: space-evenly;
     padding: 20px; */
     /* margin-top: 2rem; */
 }
-.image{
+
+.image {
     width: 20rem;
     height: 20rem;
 }
-.container{
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 20px;
-        width: auto;
-    
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    width: auto;
+
 }
-.main{
+
+.main {
     background-color: white;
     background-size: 100% 100%;
     padding: 20px;
-margin-top: 2rem;
-    border-radius: 20px 10px 20px 10px; 
-    
+    margin-top: 2rem;
+    border-radius: 20px 10px 20px 10px;
+
 }
-.addbtn{
+
+.addbtn {
     width: 8rem;
     height: 4rem;
     padding: 5px;
@@ -146,12 +149,14 @@ margin-top: 2rem;
     cursor: pointer;
     border-color: white;
 }
+
 .addbtn:hover {
     background-color: #48AFFF;
     color: white;
-   
+
 }
-.addbtns{
+
+.addbtns {
     width: 8rem;
     height: 4rem;
     padding: 5px;
@@ -164,22 +169,49 @@ margin-top: 2rem;
     text-align: center;
     margin-top: 2rem;
 }
+
 .addbtns:hover {
     background-color: #ff0000;
     color: white;
-   
+
 }
 
-.add{
+.add {
     width: 4rem;
     height: 2rem;
     padding: 2px;
     font-size: 10px;
     cursor: pointer;
 }
-.total{
+
+.total {
     padding: 20px;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
+}
+
+.mt {
+    margin-top: 4rem;
+}
+
+.loghtml {
+    background-color: white;
+    background-size: 100% 100%;
+    width: 31%;
+    /* border-radius: 20px 10px 20px 10px    */
+}
+
+.loginbtn {
+    width: 16rem;
+    height: 2rem;
+    margin-top: 2rem;
+    background-color: hsl(192, 90%, 64%);
+    border-color: white;
+    cursor: pointer;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 4rem;
+}
+.loginbtn:hover{
+    background-color:  #48AFFF;
 }
