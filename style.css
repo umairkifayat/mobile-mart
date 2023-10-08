@@ -212,6 +212,13 @@ body {
     border-radius: 5px 5px 5px 5px;
     margin-bottom: 4rem;
 }
-.loginbtn:hover{
-    background-color:  #48AFFF;
+
+.loginbtn:hover {
+    background-color: #48AFFF;
+}
+
+.searchlog {
+    width: 15rem;
+    height: 1rem;
+    padding: 5px;
 }

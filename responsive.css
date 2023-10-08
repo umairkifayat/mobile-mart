@@ -28,8 +28,49 @@
         display: none;
     }
     .h2{
-        font-size: 7px;
+        font-size: 15px;
     }
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+    
+    }
+    .main {
+        background-color: white;
+        padding: 20px;
+        margin-top: 1rem;
+        border-radius: 20px 10px 20px 10px;
+    
+    } 
+    .image {
+        width: 5rem;
+        height: 5rem;
+    }
+.logimg{
+    width: 100px;
+}
+.searchlog{
+    width: 90%;
+}
+.loghtml {
+    background-color: white;
+    background-size: 100% 100%;
+    width:100px;
+    /* border-radius: 20px 10px 20px 10px    */
+}
+.loginbtn {
+    width: 100px;
+    height: 2rem;
+    margin-top: 2rem;
+    background-color: hsl(192, 90%, 64%);
+    border-color: white;
+    cursor: pointer;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 4rem;
+}
 
 }
 @media screen and (min-width:300px) {
@@ -37,18 +78,15 @@
         justify-content: space-evenly;
     }
 
-    .search {
-        border: 1px solid white;
-        margin-top: 1px;
-        border-radius: 5px 0px 0px 5px;
-        width: 5rem;
-        height: 20px; 
-        color: black;
-
+    .logimg{
+        width: 100px;
     }
 
     .h1 {
         font-size: 7px;
+    }
+    .h2{
+        font-size: 20px;
     }
 
     .Phone {
@@ -60,9 +98,22 @@
         border-radius: 0px 0px 0px 0px;
         font-size: 18px;
     }
+    .log{
+    
+        display: block;
 
-    .log {
-        display: none;
+        width: 50px;
+        height: 20px;
+        padding: 0px;
+        border-radius: black;
+        border: 1px solid white;
+        color: #48AFFF;
+        background-color: white;
+        cursor: pointer;
+        font-size: 10px;
+        margin-top: 2px;
+align-items: center;
+        border-radius: 2em / 5em;
     }
     .header{
         display: none;
@@ -76,6 +127,28 @@
         cursor: pointer;
         border: 1px solid white;
         border-radius: 5px 5px 5px 5px;
+    }
+    .logimg{
+        width: 10rem;
+    }
+    .searchlog{
+        width: 9rem;
+    }
+    .loghtml {
+        background-color: white;
+        /* background-size: 10rem; */
+        width:10rem;
+        /* border-radius: 20px 10px 20px 10px    */
+    }
+    .loginbtn {
+        width: 100px;
+        height: 2rem;
+        margin-top: 2rem;
+        background-color: hsl(192, 90%, 64%);
+        border-color: white;
+        cursor: pointer;
+        border-radius: 5px 5px 5px 5px;
+        margin-bottom: 4rem;
     }
 }
 
@@ -118,14 +191,7 @@
 }
 
 @media screen and (min-width:500px) {
-    .search {
-
-        width: 10rem;
-        height: 25px;
-        border-radius: 5px 0px 0px 5px;
-        border-color: aliceblue;
-
-    }
+    
 
     .h1 {
         font-size: 15px;
@@ -134,23 +200,18 @@
     display: block;
     display: flex;
     }
-
-    .Phone {
-        background-color: white;
-        padding: 1px;
-        margin-top: 1px;
-        color: #48AFFF;
-        position: absolute;
-        border-radius: 0px 0px 0px 0px;
-        font-size: 25px;
+    .h2{
+        font-size: 30px;
     }
+
+   
 
     .log{
     
         display: block;
 
-        width: 100px;
-        height: 40px;
+        width: 80px;
+        height: 30px;
         padding: 0px;
         border-radius: black;
         border: 1px solid white;
@@ -162,10 +223,29 @@
 
         border-radius: 2em / 5em;
     }
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+    
+    }
+    .main {
+        background-color: white;
+        padding: 20px;
+        margin-top: 1rem;
+        border-radius: 20px 10px 20px 10px;
+    
+    } 
+    .image {
+        width: 15rem;
+        height: 15rem;
+    }
 
     .register {
-        width: 100px;
-        height: 40px;
+        width: 80px;
+        height: 30px;
         padding: 2px 1px;
         color: white;
         background-color: #48AFFF;
@@ -175,9 +255,86 @@
         border: 1px solid white;
         border-radius: 5px 5px 5px 5px;
     }
+    .logimg{
+        width: 20rem;
+    }
+    .searchlog{
+        width: 9rem;
+    }
+    .loghtml {
+        background-color: white;
+        /* background-size: 10rem; */
+        width:20rem;
+        /* border-radius: 20px 10px 20px 10px    */
+    }
+    .loginbtn {
+        width: 100px;
+        height: 2rem;
+        margin-top: 2rem;
+        background-color: hsl(192, 90%, 64%);
+        border-color: white;
+        cursor: pointer;
+        border-radius: 5px 5px 5px 5px;
+        margin-bottom: 4rem;
+    }
 }
 
-@media screen and (min-width:900px) {
+@media screen and (min-width:650px) {
+    .search{
+        display: block;
+        display: flex;
+        position: relative;
+        width: 15rem;
+        border-radius: 5px 5px 5px 5px;
+    }
+    .Phone {
+        display: none;
+      
+    }
+    .log{
+
+        width: 60px;
+        height: 30px;
+        padding: 0px;
+        border-radius: black;
+        border: 1px solid white;
+        color: #48AFFF;
+        background-color: white;
+        cursor: pointer;
+        font-size: 10px;
+        margin-top: 5px;
+
+        border-radius: 2em / 5em;
+    }
+    .image {
+        width: 25rem;
+        height:  25rem;
+    }
+    .logimg{
+        width: 30rem;
+    }
+    .searchlog{
+        width: 15rem;
+    }
+    .loghtml {
+        background-color: white;
+        /* background-size: 10rem; */
+        width:30rem;
+        /* border-radius: 20px 10px 20px 10px    */
+    }
+    .loginbtn {
+        width: 10rem;
+        height: 2rem;
+        margin-top: 2rem;
+        background-color: hsl(192, 90%, 64%);
+        border-color: white;
+        cursor: pointer;
+        border-radius: 5px 5px 5px 5px;
+        margin-bottom: 4rem;
+    }
+}
+
+@media screen and (min-width:1000px) {
     
    
     .search {
@@ -230,11 +387,11 @@ display: hidden;
         border-radius: 5px 5px 5px 5px;
     }
 }
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1200px) {
  
-    .search {
+     .search {
         border: 1px solid white;
-    margin-top: 5px;
+    align-items: center;
     border-radius: 5px 0px 0px 5px;
     width: 31rem;
     height: 30px; 
@@ -296,10 +453,10 @@ display: hidden;
 
     .h1 {
         font-size: 30px;
-    }
+     } 
 
     .Phone {
-        /* margin-top: 5px; */
+        margin-top: 5px;
 
         background-color: white;
         padding: 5px;
@@ -333,5 +490,5 @@ display: hidden;
         cursor: pointer;
         border: 1px solid white;
         border-radius: 5px 5px 5px 5px;
-    }
+    } 
 }
