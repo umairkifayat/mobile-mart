@@ -106,13 +106,17 @@ for (let i = 0; i < phones.length; i++) {
                 `
 
 }
-// const cartarr = [];         
 
 const cartData = localStorage.getItem('cartarr');
 const jsonData = JSON.parse(cartData);
-console.log(jsonData);
-const cartarr = [...jsonData];
+let cartarr; 
+if (Array.isArray(jsonData)) {
+    cartarr = [...jsonData];
 
+
+} else {
+    cartarr = [];
+}
 
 
 // const cartarr = [];         
@@ -121,20 +125,20 @@ function addcart(index) {
     if (cartarr.includes(phones[index])) {
         // console.log("if chl gya");
         for (let i = 0; i < cartarr.length; i++) {
-        if (cartarr[i] === phones[index]) {
-            phones[index].quantity += 1
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Item Added ',
-                showConfirmButton: false,
-                timer: 1500
-            })
-            // console.log(phones[index]);
-        
-        }
-        
-            
+            if (cartarr[i] === phones[index]) {
+                phones[index].quantity += 1
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Item Added ',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                // console.log(phones[index]);
+
+            }
+
+
         }
     } else {
         Swal.fire({
@@ -152,8 +156,8 @@ function addcart(index) {
 
 function gotocart(params) {
     const cart = JSON.stringify(cartarr);
-localStorage.setItem("cartarr", cart)
-    window.location = "./cart.html" 
+    localStorage.setItem("cartarr", cart)
+    window.location = "./cart.html"
 }
 function log(params) {
     window.location = './log.html'

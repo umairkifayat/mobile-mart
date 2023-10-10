@@ -93,5 +93,4 @@ function del(i) {
 
 // reload page problem 
 window.onbeforeunload = function () {
-    localStorage.setItem('cartarr', JSON.stringify(array));
 };
