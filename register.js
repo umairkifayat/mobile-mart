@@ -15,7 +15,7 @@ btn.addEventListener('click', () => {
     })
     Swal.fire({
         position: 'center',
-        icon: 'You are registered',
+        icon: 'Registered',
         title: '',
         showConfirmButton: false,
         timer: 1500
