@@ -161,4 +161,10 @@ function gotocart(params) {
 }
 function log(params) {
     window.location = './log.html'
+    
+}
+
+function logreg(params) {
+    window.location = './register.html'
+    
 }
