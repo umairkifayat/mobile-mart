@@ -26,6 +26,7 @@ btn.addEventListener('click', (e) => {
             })
 
         }
+        window.location = './index.html'
     });
     if (!userfound) {
         alert('please enter correct');
