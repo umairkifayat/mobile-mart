@@ -23,6 +23,7 @@ btn.addEventListener('click', () => {
     // console.log(array);
     const reg = JSON.stringify(array)
     localStorage.setItem('array', reg)
+    window.location = './index.html'
     // console.log(array);
 
 
