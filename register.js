@@ -13,13 +13,7 @@ btn.addEventListener('click', () => {
         password: password.value,
 
     })
-    Swal.fire({
-        position: 'center',
-        icon: 'Registered',
-        title: '',
-        showConfirmButton: false,
-        timer: 1500
-    })
+  
     // console.log(array);
     const reg = JSON.stringify(array)
     localStorage.setItem('array', reg)
